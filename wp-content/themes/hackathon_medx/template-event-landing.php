@@ -134,13 +134,13 @@ if(!empty($event_id))
 			$category=MthemeCore::getPostMeta($event_id, $post_pre.'package_cat');
 		}
 		if(!empty($event_slider)){
-			$register_link=MthemeCore::getPostMeta($event_slider,"event_slider_event_link","#register_me");
+			$register_link=MthemeCore::getPostMeta($event_slider,"event_slider_event_link","https://hackpartners.typeform.com/to/Tu7SFf");
 		}else
 		{
 			$register_link=SITE_URL;
 		}
 		/*$outContent='<div id="package">';
-		$outContent.=do_shortcode('[event_packages register_link="'.$register_link.'" category="'.$category.'"]');
+		$outContent.=do_shortcode('[event_packages register_link="https://hackpartners.typeform.com/to/Tu7SFf" category="'.$category.'"]');
 		$outContent.='</div>';
 		$menuOrder=MthemeCore::getPostMeta($event_id,$post_pre.'package_order','6');
 		$contentArray[5]= array($menuOrder,$menuContent,$outContent);*/
@@ -207,7 +207,7 @@ if(!empty($event_id))
 		
 		$outContent='<div id="contact" style="background-color: #212739">';
 		//$outContent.=do_shortcode('[footer_contact]');
-		$outContent.='<h1 style="color: white; width: 100%; text-align: center;">Apply Now</h1><iframe id="typeform-full" width="100%" height="500px" frameborder="0" src="https://hackpartners.typeform.com/to/Tu7SFf"></iframe>';
+		$outContent.='<style>.h1-typeform-btn:hover { background-color: #428bca; }</style><a class="typeform-share" href="https://hackpartners.typeform.com/to/Tu7SFf" data-mode="1" target="_blank"><h1 class="h1-typeform-btn" style="color: white; width: 100%; text-align: center;">Apply Now</h1></a> <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id="typef_orm",b="https://s3-eu-west-1.amazonaws.com/share.typeform.com/";if(!gi.call(d,id)){js=ce.call(d,"script");js.id=id;js.src=b+"share.js";q=gt.call(d,"script")[0];q.parentNode.insertBefore(js,q)}id=id+"_";if(!gi.call(d,id)){qs=ce.call(d,"link");qs.rel="stylesheet";qs.id=id;qs.href=b+"share-button.css";s=gt.call(d,"head")[0];s.appendChild(qs,s)}})()</script>';
 		$outContent.='</div>';
 		$menuOrder=MthemeCore::getPostMeta($event_id,$post_pre.'contact_order','10');
 		$contentArray[9]= array($menuOrder,$menuContent,$outContent);
