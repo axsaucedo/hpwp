@@ -2,4 +2,5 @@ env:
   global:
     - REPO="/home/bitnami/apps/wordpress/htdocs"
     - CI_HOME=`pwd`/$REPO
-script: build.sh
+script: 
+    - git pull
