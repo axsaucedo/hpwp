@@ -139,12 +139,13 @@ if(!empty($event_id))
 		{
 			$register_link=SITE_URL;
 		}
-		$outContent='<div id="package">';
+		/*$outContent='<div id="package">';
 		$outContent.=do_shortcode('[event_packages register_link="'.$register_link.'" category="'.$category.'"]');
 		$outContent.='</div>';
 		$menuOrder=MthemeCore::getPostMeta($event_id,$post_pre.'package_order','6');
-		$contentArray[5]= array($menuOrder,$menuContent,$outContent);
+		$contentArray[5]= array($menuOrder,$menuContent,$outContent);*/
 	}
+	/*
 	if(MthemeCore::getPostMeta($event_id, $post_pre.'contact_form_display')=='true')
 	{
 		$menuContent='';
@@ -159,7 +160,7 @@ if(!empty($event_id))
 		$outContent.='</div>';
 		$menuOrder=MthemeCore::getPostMeta($event_id,$post_pre.'contact_form_order','7');
 		$contentArray[6]= array($menuOrder,$menuContent,$outContent);
-	}
+	}*/
 	if(MthemeCore::getPostMeta($event_id, $post_pre.'sponsor_display')=='true')
 	{
 		$menuContent='';
@@ -180,7 +181,7 @@ if(!empty($event_id))
 		$menuOrder=MthemeCore::getPostMeta($event_id,$post_pre.'sponsor_order','8');
 		$contentArray[7]= array($menuOrder,$menuContent,$outContent);
 	}
-	if(MthemeCore::getPostMeta($event_id, $post_pre.'notify_display')=='true')
+	/*if(MthemeCore::getPostMeta($event_id, $post_pre.'notify_display')=='true')
 	{
 		$menuContent='';
 		if(MthemeCore::getPostMeta($event_id, $post_pre.'notify_menu_active')=='true')
@@ -194,7 +195,7 @@ if(!empty($event_id))
 		$outContent.='</div>';
 		$menuOrder=MthemeCore::getPostMeta($event_id,$post_pre.'notify_order','9');
 		$contentArray[8]= array($menuOrder,$menuContent,$outContent);
-	}
+	}*/
 	if(MthemeCore::getPostMeta($event_id, $post_pre.'contact_display')=='true')
 	{
 		$menuContent='';
@@ -204,8 +205,9 @@ if(!empty($event_id))
 			$menuContent='<li><a data-scroll href="#contact">'.$heading.'</a></li>';
 		}
 		
-		$outContent='<div id="contact">';
-		$outContent.=do_shortcode('[footer_contact]');
+		$outContent='<div id="contact" style="background-color: #212739">';
+		//$outContent.=do_shortcode('[footer_contact]');
+		$outContent.='<h1 style="color: white; width: 100%; text-align: center;">Apply Now</h1><iframe id="typeform-full" width="100%" height="500px" frameborder="0" src="https://hackpartners.typeform.com/to/Tu7SFf"></iframe>';
 		$outContent.='</div>';
 		$menuOrder=MthemeCore::getPostMeta($event_id,$post_pre.'contact_order','10');
 		$contentArray[9]= array($menuOrder,$menuContent,$outContent);
