@@ -1,4 +1,5 @@
 # HP WP
+The HP Website
 
 ## Setup
 To setup, it's recommended to use WPCli:
